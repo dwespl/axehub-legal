@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AxeHub - Privacy Policy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #0a0a1a;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        h1 { color: #ff9500; }
+        h2 { color: #ff9500; margin-top: 32px; }
+        a { color: #4fc3f7; }
+        .date { color: #888; font-size: 14px; }
+        .highlight { background: #1a1a2e; padding: 16px; border-radius: 8px; border-left: 3px solid #ff9500; margin: 16px 0; }
+    </style>
+</head>
+<body>
+    <h1>AxeHub - Privacy Policy</h1>
+    <p class="date">Last updated: April 13, 2026</p>
+
+    <div class="highlight">
+        <strong>Summary:</strong> AxeHub does not collect, transmit, or sell any personal data. All data stays on your device and your local network.
+    </div>
+
+    <h2>1. Data We Collect</h2>
+    <p><strong>None.</strong> AxeHub does not collect any personal information, analytics, telemetry, or usage data. The app has no backend servers, no user accounts, and no cloud services.</p>
+
+    <h2>2. Local Data Storage</h2>
+    <p>AxeHub stores the following data <strong>locally on your device only</strong>:</p>
+    <ul>
+        <li><strong>Miner IP addresses</strong> &mdash; to connect to your mining devices on the local network</li>
+        <li><strong>Mining statistics</strong> &mdash; hashrate history, share counts, best difficulty (for charts)</li>
+        <li><strong>App settings</strong> &mdash; language, currency, pool type, thresholds</li>
+        <li><strong>Tuning profiles</strong> &mdash; frequency/voltage configurations you create or import</li>
+        <li><strong>Schedule configurations</strong> &mdash; day/night mining schedules</li>
+        <li><strong>Hub connection tokens</strong> &mdash; for remote access pairing (stored locally)</li>
+        <li><strong>Nano3S credentials</strong> &mdash; username and password hash for device authentication</li>
+        <li><strong>Diagnostic logs</strong> &mdash; masked (IP addresses, wallet addresses, and MAC addresses are obfuscated before storage)</li>
+    </ul>
+    <p>This data is stored using Hive (local database) and SharedPreferences. It never leaves your device unless you explicitly use the Hub feature to share miner status with another device you control.</p>
+
+    <h2>3. Network Communication</h2>
+    <p>AxeHub communicates over the network in the following ways:</p>
+    <ul>
+        <li><strong>Local network (LAN):</strong> HTTP requests to your mining devices (Bitaxe port 80, Nano3S port 4028). This traffic stays within your home network.</li>
+        <li><strong>Hub mode:</strong> If you enable Hub mode, the app runs an HTTPS server on your device (port 8742) that other instances of AxeHub can connect to. This uses self-signed TLS certificates with certificate pinning. You control who can connect via 6-digit pairing codes.</li>
+        <li><strong>Price data:</strong> The app fetches cryptocurrency prices from <a href="https://www.coingecko.com">CoinGecko API</a> and mining difficulty from <a href="https://whattomine.com">WhatToMine</a>. These are public APIs; no personal data is sent &mdash; only the coin ID and fiat currency code.</li>
+    </ul>
+
+    <h2>4. Third-Party Services</h2>
+    <p>AxeHub uses the following third-party APIs for price/difficulty data only:</p>
+    <ul>
+        <li>CoinGecko (<a href="https://www.coingecko.com/en/privacy">privacy policy</a>)</li>
+        <li>WhatToMine (<a href="https://whattomine.com">whattomine.com</a>)</li>
+    </ul>
+    <p>No personal data, device identifiers, or usage statistics are shared with these services.</p>
+
+    <h2>5. Permissions</h2>
+    <ul>
+        <li><strong>Internet</strong> &mdash; to communicate with miners on your LAN and fetch price data</li>
+        <li><strong>Notifications</strong> &mdash; for temperature alerts, offline warnings, and milestone celebrations</li>
+        <li><strong>Camera</strong> &mdash; only when you use the QR scanner to import tuning profiles (not used otherwise)</li>
+        <li><strong>Foreground Service</strong> &mdash; to keep the Hub server running in the background on Android (opt-in)</li>
+    </ul>
+
+    <h2>6. Children's Privacy</h2>
+    <p>AxeHub is not directed at children under 13. The app manages cryptocurrency mining hardware and is intended for adult users.</p>
+
+    <h2>7. Data Deletion</h2>
+    <p>All data is stored locally. Uninstalling the app removes all stored data. You can also clear individual data (miners, logs, profiles) from within the app settings.</p>
+
+    <h2>8. Changes to This Policy</h2>
+    <p>We may update this privacy policy from time to time. Changes will be posted on this page with an updated date.</p>
+
+    <h2>9. Contact</h2>
+    <p>If you have questions about this privacy policy, you can reach us via:</p>
+    <ul>
+        <li>GitHub: <a href="https://github.com/dwespl/axehub">github.com/dwespl/axehub</a></li>
+    </ul>
+</body>
+</html>
